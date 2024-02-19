@@ -1,0 +1,57 @@
+name: project_h
+description: "A new Flutter project."
+
+publish_to: 'Sri Krishna' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+  crystal_navigation_bar: ^1.0.0
+  flutter_screenutil: ^5.9.0
+  get: ^4.6.6
+  flutter_launcher_icons: "^0.13.1"
+  video_player: ^2.8.2
+  url_launcher: ^6.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "asset/logo.png"
+  min_sdk_android: 21
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+
+  assets:
+    - asset/
+
+
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+
