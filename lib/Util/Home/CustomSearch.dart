@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_h/Util/util.dart';
+import 'package:project_h/bloc/overscreen_bloc/overscreen_bloc.dart';
+import 'package:project_h/bloc/overscreen_bloc/overscreen_event_bloc.dart';
+import 'package:project_h/bloc/overscreen_bloc/overscreen_state_bloc.dart';
 
-class HomeSearch extends StatelessWidget {
+class HomeSearch extends StatefulWidget {
   const HomeSearch({super.key});
 
+  @override
+  State<HomeSearch> createState() => _HomeSearchState();
+}
+
+class _HomeSearchState extends State<HomeSearch> {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
@@ -19,17 +29,24 @@ class HomeSearch extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                color: Colors.white,
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: 'Search'),
-                  ),
-                ))
+            BlocBuilder<OverscreenBloc, OverscreenStateBloc>(
+                bloc: overscreenBloc,
+                builder: (context, state) {
+                  return Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: TextField(
+                          readOnly: true,
+                          onTap: () => overscreenBloc
+                              .add(SelectedIndex(currentIndex: 1)),
+                          decoration: InputDecoration(
+                              border: InputBorder.none, hintText: 'Search'),
+                        ),
+                      ));
+                })
           ],
         ),
       ),

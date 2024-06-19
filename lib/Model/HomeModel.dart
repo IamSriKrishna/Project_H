@@ -27,8 +27,8 @@ final List<HomeModel> homeModel = [
     ],
   ),
   HomeModel(
-    title: 'Classic House',
-    area: 'Adyar',
+    title: 'Modern House',
+    area: 'Porur',
     img: [
       'https://imgs.search.brave.com/84fDrOzj4nZMd_-q3wuLpXyYCgMFZ3U1C8JaqgHq5n8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9s/dXh1cnktcG9vbC12/aWxsYS1zcGVjdGFj/dWxhci1jb250ZW1w/b3JhcnktZGVzaWdu/LWRpZ2l0YWwtYXJ0/LXJlYWwtZXN0YXRl/LWhvbWUtaG91c2Ut/cHJvcGVydHktZ2Vf/MTI1OC0xNTA3NDku/anBnP3NpemU9NjI2/JmV4dD1qcGc',
       'https://imgs.search.brave.com/VAoDVDLl1tuYlVhcAskxKgHtj1lRr5WdvTX3gZCHODs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aG9tZXN0cmF0b3Nw/aGVyZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTYvMDYv/MmFkLUJlYWNoLmpw/Zw',
@@ -47,8 +47,8 @@ final List<HomeModel> homeModel = [
     ],
   ),
   HomeModel(
-    title: 'Classic House',
-    area: 'Adyar',
+    title: 'Devin House',
+    area: 'S Kolathur',
     img: [
       'https://imgs.search.brave.com/84fDrOzj4nZMd_-q3wuLpXyYCgMFZ3U1C8JaqgHq5n8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9s/dXh1cnktcG9vbC12/aWxsYS1zcGVjdGFj/dWxhci1jb250ZW1w/b3JhcnktZGVzaWdu/LWRpZ2l0YWwtYXJ0/LXJlYWwtZXN0YXRl/LWhvbWUtaG91c2Ut/cHJvcGVydHktZ2Vf/MTI1OC0xNTA3NDku/anBnP3NpemU9NjI2/JmV4dD1qcGc',
       'https://imgs.search.brave.com/VAoDVDLl1tuYlVhcAskxKgHtj1lRr5WdvTX3gZCHODs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aG9tZXN0cmF0b3Nw/aGVyZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTYvMDYv/MmFkLUJlYWNoLmpw/Zw',

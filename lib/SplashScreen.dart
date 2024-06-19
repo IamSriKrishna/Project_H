@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:project_h/Feature/OverScreen/OverScreen.dart';
 import 'package:video_player/video_player.dart';
 
@@ -26,9 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
           !_controller.value.isPlaying &&
           !_controller.value.isBuffering) {
         Future.delayed(Duration(milliseconds: 1500), () {
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => OverScreen()),
-          );
+          Get.off(() => OverScreen());
         });
       }
     });

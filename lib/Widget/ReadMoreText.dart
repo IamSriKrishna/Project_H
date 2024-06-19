@@ -8,7 +8,7 @@ class ReadMoreText extends StatefulWidget {
   const ReadMoreText({
     Key? key,
     required this.text,
-    this.maxLines = 2,
+    this.maxLines = 8,
     required this.textStyle,
   }) : super(key: key);
 

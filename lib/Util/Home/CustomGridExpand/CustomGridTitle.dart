@@ -43,17 +43,10 @@ class CustomGridTitle extends StatelessWidget {
                 Row(
                   children: [
                     Icon(
-                      Icons.star,
+                      Icons.favorite_outline,
                       color: Colors.black,
                       size: 15.h,
                     ),
-                    Text(
-                      '(4.0)',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18.sp,
-                      ),
-                    )
                   ],
                 )
               ],

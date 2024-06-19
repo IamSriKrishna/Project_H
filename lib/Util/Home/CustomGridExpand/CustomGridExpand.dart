@@ -4,6 +4,7 @@ import 'package:project_h/Util/Home/CustomGridExpand/CustomGridDescription.dart'
 import 'package:project_h/Util/Home/CustomGridExpand/CustomGridImage.dart';
 import 'package:project_h/Util/Home/CustomGridExpand/CustomGridOverView.dart';
 import 'package:project_h/Util/Home/CustomGridExpand/CustomGridTitle.dart';
+import 'package:project_h/bloc/custom_bloc/custom_bloc.dart';
 
 class CustomGridExpand extends StatefulWidget {
   final List<String> img;
@@ -24,8 +25,12 @@ class CustomGridExpand extends StatefulWidget {
 }
 
 class _CustomGridExpandState extends State<CustomGridExpand> {
-  int currentImage = 0;
-
+  final CustomBloc _customBloc = CustomBloc();
+  @override
+  void dispose() {
+    _customBloc.close();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +38,7 @@ class _CustomGridExpandState extends State<CustomGridExpand> {
         slivers: [
           //Image
           CustomGridImage(
-              index: widget.index, img: widget.img, currentImage: currentImage),
+              index: widget.index, img: widget.img),
           // Title/Area/Rating
           CustomGridTitle(area: widget.area, title: widget.title),
           // Description
@@ -41,11 +46,6 @@ class _CustomGridExpandState extends State<CustomGridExpand> {
           //OverView
           CustomGridOverview(
             img: widget.img,
-            onImageChanged: (int index) {
-              setState(() {
-                currentImage = index;
-              });
-            },
           ),
           //Buy Button
           SliverToBoxAdapter(
